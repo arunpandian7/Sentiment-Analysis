@@ -1,0 +1,4 @@
+consumer_key = 'YNLREzlEXfpbevfr85dvFzyZ6'
+access_key = '1133782982202781696-eYQZ3PnsN4pzvAIBp1zXEDDtfsDgk9'
+access_secret_key = '99laa4oEvoLvNMR0ySIZ6DmgbBTElqkoLSbZnBKh35MLQ'
+consumer_secret_key = 'IY1dv55lP9oGaWDn9F4kNibNldvu0m96uZ0tF6JV6ZnJg5197d'
