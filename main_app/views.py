@@ -11,9 +11,9 @@ import json
 import jsonify
 import tweepy
 
-from keras.models import load_model
-from keras.preprocessing.sequence import pad_sequences
-from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
 
 import pickle
 import tensorflow as tf
@@ -22,7 +22,7 @@ from .config import consumer_key, consumer_secret_key, access_key, access_secret
 
 
 global graph
-graph = tf.get_default_graph()
+graph = tf.compat.v1.get_default_graph()
 model = load_model('main_app/model/sentiment_model.hdf5')
 MAX_SEQUENCE_LENGHT = 300
 
