@@ -17,14 +17,16 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 
 import pickle
 import tensorflow as tf
+#tf.compat.v1.disable_v2_behavior()
 
 from .config import consumer_key, consumer_secret_key, access_key, access_secret_key
 
 
-global graph
-graph = tf.compat.v1.get_default_graph()
+#global graph
+#graph = tf.compat.v1.get_default_graph()
+
 model = load_model('main_app/model/sentiment_model.hdf5')
-MAX_SEQUENCE_LENGHT = 300
+MAX_SEQUENCE_LENGTH = 300
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret_key)
 auth.set_access_token(access_key, access_secret_key)
@@ -36,9 +38,9 @@ with open('main_app/model/tokenizer.pickle', 'rb') as handle:
 
 def predict(text, include_neutral = True):
 
-    x_test = pad_sequences(tokenizer.texts_to_sequences([text]), maxlen=MAX_SEQUENCE_LENGHT)
-
+    x_test = pad_sequences(tokenizer.texts_to_sequences([text]), maxlen=MAX_SEQUENCE_LENGTH)
     score = model.predict([x_test])[0]
+    label="undef"
     if (score >= 0.5 and score<= 0.6):
         label = "Neutral"
     elif (score>= 0.6):
@@ -49,7 +51,7 @@ def predict(text, include_neutral = True):
             "score": float(score)}
 
 def homepage(request):
-    return render(request, "build/index.html")
+    return render(request, "public/index.html")
 
 
 @api_view(["GET"])
@@ -57,8 +59,7 @@ def getsentiment(request):
     data = {"success": False}
 
     if request.data != None:
-        with graph.as_default():
-            data['predictions'] = predict(request.GET.get("text"))
+        data['predictions'] = predict(request.GET.get("text"))
         data['success'] = True
         return JsonResponse(data)
 
@@ -67,15 +68,15 @@ def analyzehashtag(request):
     positive = 0
     neutral = 0
     negative = 0
-    for tweet in tweepy.Cursor(api.search, q='#'+ request.GET.get("text")+ "-filter:retweets", rpp=5, lang='en', tweet_mode='extended').items(100):
-        with graph.as_default():
-            prediction = predict(tweet.full_text)
-    if (prediction["label"] == 'Positive'):
-        positive+=1
-    if prediction["label"] == 'Neutral':
-        neutral+=1
-    if prediction["label"] == 'Negative':
-        negative+=1
+    for tweet in tweepy.Cursor(api.search, q='#'+ request.GET.get("text")+ "-filter:retweets", rpp=5, lang='en', tweet_mode='extended').items(200):
+        #with graph.as_default():
+        prediction = predict(tweet.full_text)
+        if prediction["label"] == 'Positive':
+            positive+=1
+        if prediction["label"] == 'Neutral':
+            neutral+=1
+        if prediction["label"] == 'Negative':
+            negative+=1
     return JsonResponse({ "positive":positive,
                            "neutural":neutral,
                            "negative":negative})

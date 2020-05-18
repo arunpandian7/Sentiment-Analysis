@@ -9,37 +9,62 @@ import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
 
 const axios = require('axios');
-
+var ProgressBar = require('progressbar.js')
 class App extends React.Component{
 
   state = {
     hashtagText : "",
     progressBar : false,
     submitted : false,
-    options:{
-      
-    },
     hashtagDesc : "",
+    seriesData : {}
   }
 
+
+  async componentDidUpdate() {
+    var positive = 0
+      var negative = 0
+      var neutral = 0
+      var self = this;
+      try {        
+        setInterval(async () => {
+        axios.get('http://localhost:8000/analyzehashtag', {
+            params: {
+                text: this.state.hashtag
+            }
+        }).then(function(response) {
+            negative = response.data.negative
+            positive = response.data.positive
+            neutral = response.data.neutral
+            self.setState({submitted: true});
+            self.setState({series: [negative, positive, neutral]});
+        });
+            }, 3000);
+        } catch(e) {
+          console.log(e);
+        }
+      
+      
+    }
+
   clickHandler = () => {
+    console.log("Sending GET Request....")
+    console.log(this.state.hashtagText);
+
     this.setState({progressBar: true});
     this.setState({submitted: false});
-    var postive = 0
-    var negative = 0
-    var neutral = 0
     var self = this;
     try{
-      axios.get('http://localhost:8000/analysehastag',{
+      axios.get('http://localhost:8000/analyzehashtag',{
         params:{
-          text: this.state.hashtagDesc
+          text: this.state.hashtagText
         }
       }).then(function(response){
-        negative = response.data.negative
-        postive = response.data.postive
-        neutral = response.data.neutral
+        console.log("Got Response:");
+        console.log(response.data);
         self.setState({submitted: true});
-        self.setState({series:[negative, postive, neutral]});
+        self.setState({progressBar: false});
+        self.setState({seriesData:response.data});
       }, 3000);
     } catch(e){
       console.log(e);
@@ -54,6 +79,17 @@ class App extends React.Component{
           console.log(e);
         }
   }
+
+  showLoadingBar = () => {
+    if(this.state.progressBar){
+        return(
+            <div class="text-center">
+                <img src={require('./loading.gif')} width="200"/>
+                <h2 class="progressheader">Please Wait</h2>
+            </div>
+        );
+    }
+}
 
   textHandler = (event) =>{
     this.setState({hashtagText: event.target.value})
@@ -81,10 +117,11 @@ class App extends React.Component{
             onChange = {this.textHandler}
           />
         </Paper>
-        <Button className={Styles.analyseButton} variant="outlined" color="primary" onClick={clickHandler}>
-            Primary
+        <Button className={Styles.analyseButton} variant="outlined" color="primary" onClick={this.clickHandler}>
+            Analyze
         </Button>
-        <Chart />
+        <Chart data={this.state.seriesData} />
+        {this.showLoadingBar()}
         <Result />
       </div>
 
