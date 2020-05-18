@@ -25,7 +25,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
-!main_app/model/sentiment_model.hdf5
+
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
