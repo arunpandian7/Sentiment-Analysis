@@ -1,15 +1,12 @@
 import React from 'react';
-
+import Chart from 'react-apexcharts'
 import { Typography } from '@material-ui/core';
 import Styles from './App.module.css';
-import {Chart, Result} from './Components';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
 
 const axios = require('axios');
-var ProgressBar = require('progressbar.js')
 class App extends React.Component{
 
   state = {
@@ -17,39 +14,50 @@ class App extends React.Component{
     progressBar : false,
     submitted : false,
     hashtagDesc : "",
-    seriesData : {}
+    series: [44, 55, 41],
+    options: {
+      colors: ['#F7464A', '#46BFBD', '#FDB45C'],
+      labels: ['Positive', 'Negative', 'Neutral'],
+      plotOptions: {
+      pie: {
+        donut: {
+          labels: {
+            show: true
+          }
+        }
+      }
+    }
+  },
   }
 
 
-  async componentDidUpdate() {
-    var positive = 0
-      var negative = 0
-      var neutral = 0
-      var self = this;
-      try {        
-        setInterval(async () => {
-        axios.get('http://localhost:8000/analyzehashtag', {
-            params: {
-                text: this.state.hashtag
-            }
-        }).then(function(response) {
-            negative = response.data.negative
-            positive = response.data.positive
-            neutral = response.data.neutral
-            self.setState({submitted: true});
-            self.setState({series: [negative, positive, neutral]});
-        });
-            }, 3000);
-        } catch(e) {
-          console.log(e);
-        }
+  // async componentDidUpdate() {
+  //     var self = this;
+  //     try {        
+  //       setInterval(async () => {
+  //       axios.get('http://localhost:8000/analyzehashtag', {
+  //           params: {
+  //               text: this.state.hashtagText
+  //           }
+  //       }).then(function(response) {
+  //           self.setState({progressBar: false})
+  //           self.setState({submitted: true});
+  //           self.setState({seriesData: response.data});
+  //       });
+  //           }, 3000);
+  //       } catch(e) {
+  //         console.log(e);
+  //       }
       
       
-    }
+  //   }
 
   clickHandler = () => {
     console.log("Sending GET Request....")
     console.log(this.state.hashtagText);
+    var positive = 0;
+    var negative = 0;
+    var neutral = 0;
 
     this.setState({progressBar: true});
     this.setState({submitted: false});
@@ -62,10 +70,13 @@ class App extends React.Component{
       }).then(function(response){
         console.log("Got Response:");
         console.log(response.data);
+        positive = response.data.positive;
+        negative = response.data.negative;
+        neutral = response.data.neutural;
         self.setState({submitted: true});
         self.setState({progressBar: false});
-        self.setState({seriesData:response.data});
-      }, 3000);
+        self.setState({series: [positive, negative, neutral]});
+      });
     } catch(e){
       console.log(e);
     }
@@ -83,13 +94,27 @@ class App extends React.Component{
   showLoadingBar = () => {
     if(this.state.progressBar){
         return(
-            <div class="text-center">
-                <img src={require('./loading.gif')} width="200"/>
-                <h2 class="progressheader">Please Wait</h2>
+            <div className="text-center">
+                <img src={require('./loading.gif')} width="200" alt='loading-gif'/>
+                <h2 className="progressheader">Please Wait</h2>
             </div>
         );
     }
 }
+
+
+  showChart = () =>{
+    if(this.state.submitted === true){
+      return(
+        <div>
+          
+          <Chart options={this.state.options} series={this.state.series} type="donut" width="420" />
+          <h1 class="heading_desc">{this.state.hashtag_desc}</h1>
+
+        </div>
+      )
+    }
+  }
 
   textHandler = (event) =>{
     this.setState({hashtagText: event.target.value})
@@ -120,9 +145,8 @@ class App extends React.Component{
         <Button className={Styles.analyseButton} variant="outlined" color="primary" onClick={this.clickHandler}>
             Analyze
         </Button>
-        <Chart data={this.state.seriesData} />
+        {this.showChart()}
         {this.showLoadingBar()}
-        <Result />
       </div>
 
     )
