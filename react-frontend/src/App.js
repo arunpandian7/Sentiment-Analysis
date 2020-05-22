@@ -1,7 +1,7 @@
 import React from "react";
 
 import Chart from "react-apexcharts";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import Styles from "./App.module.css";
 import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
@@ -17,7 +17,7 @@ class App extends React.Component {
     tweets : [],
     series: [44, 55, 41],
     options: {
-      colors: ["#F7464A", "#46BFBD", "#FDB45C"],
+      colors: ["#46BFBD", "#F7464A",  "#FDB45C"],
       labels: ["Positive", "Negative", "Neutral"],
       plotOptions: {
         pie: {
@@ -157,8 +157,10 @@ class App extends React.Component {
       
     var renderTweets = this.state.tweets.map(function(item, i){
           return (
-                <TweetCard data={{item, i}} />
-              );
+            <Grid item xs={12} md={6} >
+            <TweetCard data={{item, i}} />
+            </Grid> 
+            );
         })
 
 
@@ -166,18 +168,19 @@ class App extends React.Component {
 
     return (
       <div className={Styles.container}>
-        <Typography variant="h2" color="primary">
+        <Typography variant="h2" color="primary" align="center" className={Styles.title}>
           Sentiment Analysis
         </Typography>
         <Paper
+          className={Styles.searchBar}
           component="form"
-          rounded
+          rounded="true"
           elevation={7}
           style={{
             padding: "2px 4px",
             display: "flex",
             alignItems: "center",
-            width: 600,
+            width: "75%",
             borderRadius: 30,
           }}
         >
@@ -191,13 +194,15 @@ class App extends React.Component {
         <Button
           className={Styles.analyseButton}
           variant="outlined"
-          color="primary"
+          color="secondary"
           onClick={this.clickHandler}
         >
           Analyze
         </ Button>
         {this.showChart()}
+        <Grid container spacing={3} style={{paddingLeft:"10", paddingRight:"10"}}>
         {this.state.submitted?renderTweets:<br />}
+        </Grid>
         {this.showLoadingBar()}
       </div>
     );
