@@ -17,7 +17,7 @@ function TweetCard(props){
 
     return(
         <div key={props.data.i}>
-        <Card variant="outlined">
+        <Card style={{minWidth:300}} variant="outlined">
             <CardContent>
                 <Typography 
                 variant="h4"

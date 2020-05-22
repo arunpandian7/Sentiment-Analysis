@@ -5,6 +5,7 @@ body{
 .container {
   display: flex;
   align-items: center;
+  margin-top: 25px;
   justify-content: center;
   flex-direction: column;
 }
@@ -12,4 +13,12 @@ body{
 .analyseButton{
   margin-top: 15px !important;
 
+}
+
+.title{
+  margin-bottom: 10px !important;
+}
+
+.searchBar{
+  margin-bottom: 5px !important;
 }
