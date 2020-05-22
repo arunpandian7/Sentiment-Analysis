@@ -81,3 +81,16 @@ def analyzehashtag(request):
                            "neutural":neutral,
                            "negative":negative})
 
+
+@api_view(["GET"])
+def fetchTweets(request):
+    tweets = []
+    for tweet in tweepy.Cursor(api.search,q="#" + request.GET.get("text") + " -filter:retweets",rpp=5,lang="en", tweet_mode='extended').items(50):
+        temp = {}
+        temp["tweet"] = tweet.full_text
+        temp["userid"] = tweet.user.screen_name
+        prediction = predict(tweet.full_text)
+        temp["label"] = prediction["label"]
+        temp["score"] = prediction["score"]
+        tweets.append(temp)
+    return JsonResponse({"results": tweets})
