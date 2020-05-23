@@ -1,13 +1,14 @@
 import React from "react";
 
 import Chart from "react-apexcharts";
-import { Typography, Grid } from "@material-ui/core";
+import { Typography, Grid} from "@material-ui/core";
 import Styles from "./App.module.css";
 import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import axios from "axios";
 import TweetCard from "./TweetCard";
+import Info from "./Info";
 class App extends React.Component {
   state = {
     hashtagText: "",
@@ -123,10 +124,10 @@ class App extends React.Component {
   showLoadingBar = () => {
     if (this.state.progressBar) {
       return (
-        <div className="text-center">
+        <div>
           <img src={require("./loading.gif")} width="200" alt="loading-gif" />
-          <h2 className="progressheader">Please Wait</h2>
-        </div>
+          <Typography variant="h5" align="center" color="secondary">Please Wait..</ Typography>
+        </ div>
       );
     }
   };
@@ -134,7 +135,7 @@ class App extends React.Component {
   showChart = () => {
     if (this.state.submitted === true) {
       return (
-        <div>
+        <div className={Styles.Chart}>
           <Chart
             options={this.state.options}
             series={this.state.series}
@@ -200,10 +201,16 @@ class App extends React.Component {
           Analyze
         </ Button>
         {this.showChart()}
-        <Grid container spacing={3} style={{paddingLeft:"10", paddingRight:"10"}}>
+        <Grid container spacing={3} style={{paddingLeft:"10px", paddingRight:"10px"}}>
         {this.state.submitted?renderTweets:<br />}
         </Grid>
         {this.showLoadingBar()}
+        <Info className={Styles.Info}/>
+        <div className={Styles.footerDiv}>
+            <Typography variant="caption" align="center">
+                Designed and Developed by Arun Pandian R.
+            </Typography>
+        </div>
       </div>
     );
   }
