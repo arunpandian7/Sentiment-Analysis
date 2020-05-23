@@ -5,9 +5,9 @@ body{
 .container {
   display: flex;
   align-items: center;
-  margin-top: 25px;
-  justify-content: center;
+  margin-top: 20px;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .analyseButton{
@@ -21,4 +21,16 @@ body{
 
 .searchBar{
   margin-bottom: 5px !important;
+}
+
+.chart{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footerDiv{
+  position: relative;
+  bottom: 0;
+  align-items: center;
+
 }
