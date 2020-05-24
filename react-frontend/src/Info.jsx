@@ -1,8 +1,20 @@
 import React from "react";
-import {Typography, Divider} from "@material-ui/core";
+import {Typography, Divider, IconButton} from "@material-ui/core";
 import Icon from "@material-ui/core/Icon";
+import { loadCSS } from 'fg-loadcss';
 
 function Info(){
+
+    React.useEffect(() => {
+        const node = loadCSS(
+          'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
+          document.querySelector('#font-awesome-css'),
+        );
+    
+        return () => {
+          node.parentNode.removeChild(node);
+        };
+      }, []);
 
     return(
         <div style={{marginTop:"20px", maxWidth:"600px", paddingBottom:"100px"}}>
@@ -27,9 +39,10 @@ function Info(){
                 Source
             </Typography>
             <Divider style={{margin: "10px auto", width:40}} />
-            <Typography variant='body1' align="center">
-                Try peeking into my GitHub Repository and my Kaggle Notebook.
-            </Typography>
+            <div style={{textAlign:"center"}}>
+                <a  href="https://www.kaggle.com/arunrk7/nlp-beginner-text-classification-using-lstm"><IconButton style={{marginRight:"10px"}} color="primary" align="center"><Icon className="fab fa-kaggle" style={{fontSize:"54px"}} /></IconButton></a>
+                <a  href="https://github.com/ArunRK7Codie/Sentiment-Analysis"><IconButton style={{marginLeft:"10px", color:"black"}}  ><Icon className="fab fa-github-square" style={{fontSize:"64px"}} /></IconButton></a>
+            </ div>
             
             
         </div>

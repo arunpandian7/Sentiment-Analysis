@@ -170,7 +170,7 @@ class App extends React.Component {
     return (
       <div className={Styles.container}>
         <Typography variant="h2" color="primary" align="center" className={Styles.title}>
-          Sentiment Analysis
+          SENTIMENT ANALYST
         </Typography>
         <Paper
           className={Styles.searchBar}
@@ -206,6 +206,7 @@ class App extends React.Component {
         </Grid>
         {this.showLoadingBar()}
         <Info className={Styles.Info}/>
+        
         <div className={Styles.footerDiv}>
             <Typography variant="caption" align="center">
                 Designed and Developed by Arun Pandian R.
