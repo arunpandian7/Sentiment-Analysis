@@ -1,22 +1,35 @@
 import {createMuiTheme} from '@material-ui/core/styles';
 
 
-
 const theme = createMuiTheme({
-    palette: {
-      primary: {
-        light: '#757ce8',
-        main: '#3f50b5',
-        dark: '#002884',
-        contrastText: '#fff',
-      },
-      secondary: {
-        light: '#ff7961',
-        main: '#f44336',
-        dark: '#ba000d',
-        contrastText: '#000',
-      },
+  palette: {
+    primary: {
+      main: '#000000',
     },
+    secondary: {
+     
+      main: '#f3ca20',
+    },
+    text:{
+      primary : '#3b3b00'
+
+    }
+  },
+    typography: {
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+    },
+
   
   });
 
@@ -33,7 +46,7 @@ theme.typography.h4 ={
   fontSize:'1.4rem',
   [theme.breakpoints.up('md')]:{
     fontSize:'2.4rem',
-    letterSpacing: '0.3rem'
+    letterSpacing: '0.1rem'
   },
   letterSpacing:'0.09rem'
 }
@@ -42,7 +55,7 @@ theme.typography.body1 ={
   fontSize:'0.8rem',
   [theme.breakpoints.up('md')]:{
     fontSize:'1.2rem',
-    letterSpacing:'0.09rem',
+    letterSpacing:'0.04rem',
     lineHeight:'2.2rem'
   },
   lineHeight:'1.8rem'

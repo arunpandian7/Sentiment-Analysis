@@ -7,8 +7,8 @@ import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import axios from "axios";
-import TweetCard from "./TweetCard";
-import Info from "./Info";
+import {TweetCard, Info} from './components';
+import Icon from "@material-ui/core/Icon";
 class App extends React.Component {
   state = {
     hashtagText: "",
@@ -124,9 +124,9 @@ class App extends React.Component {
   showLoadingBar = () => {
     if (this.state.progressBar) {
       return (
-        <div>
+        <div className={Styles.loadingBar}>
           <img src={require("./loading.gif")} width="200" alt="loading-gif" />
-          <Typography variant="h5" align="center" color="secondary">Please Wait..</ Typography>
+          <Typography variant="h5" align="center" color="primary">Please Wait..</ Typography>
         </ div>
       );
     }
@@ -185,6 +185,7 @@ class App extends React.Component {
             borderRadius: 30,
           }}
         >
+          <Icon className={"fas fa-hashtag"} style={{marginLeft:"10px"}} color='secondary' />
           <InputBase
             style={{ marginLeft: 10, flex: 1 }}
             placeholder="Search"
@@ -208,7 +209,7 @@ class App extends React.Component {
         <Info className={Styles.Info}/>
         
         <div className={Styles.footerDiv}>
-            <Typography variant="caption" align="center">
+            <Typography className={Styles.credit} variant="caption" align="center" color="textSecondary">
                 Designed and Developed by Arun Pandian R.
             </Typography>
         </div>
