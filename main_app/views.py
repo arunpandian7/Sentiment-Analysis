@@ -40,7 +40,7 @@ def predict(text, include_neutral = True):
 
     x_test = pad_sequences(tokenizer.texts_to_sequences([text]), maxlen=MAX_SEQUENCE_LENGTH)
     score = model.predict([x_test])[0]
-    label="undef"
+    label="Cannot Predict"
     if (score >= 0.5 and score<= 0.6):
         label = "Neutral"
     elif (score>= 0.6):
