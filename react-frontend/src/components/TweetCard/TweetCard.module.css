@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+.userName{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.tweetContent{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.predictedLabel{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 600 !important;
+    font-style: italic;
+}

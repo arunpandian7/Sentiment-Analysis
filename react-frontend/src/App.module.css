@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 body{
-  background-color: white;
+  background-color: #f9f8f8;
 }
 
 .container {
@@ -17,6 +20,7 @@ body{
 
 .title{
   margin-bottom: 10px !important;
+  font-family: 'Chelsea Market', cursive !important;
 }
 
 .searchBar{
@@ -33,4 +37,12 @@ body{
   bottom: 0;
   align-items: center;
 
+}
+
+.loadingBar{
+  margin-top: 10px;
+}
+
+.credit{
+  font-family: 'Quicksand', sans-serif;
 }
