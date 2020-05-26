@@ -59,7 +59,7 @@ ROOT_URLCONF = 'django_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'react-frontend')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +124,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'react-frontend', "public", "static"),  # update the STATICFILES_DIRS
+    os.path.join(BASE_DIR, 'react-frontend', "build", "static"),  # update the STATICFILES_DIRS
 )
 CORS_ORIGIN_ALLOW_ALL = True

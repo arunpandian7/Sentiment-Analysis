@@ -51,7 +51,7 @@ def predict(text, include_neutral = True):
             "score": float(score)}
 
 def homepage(request):
-    return render(request, "public/index.html")
+    return render(request, "build/index.html")
 
 
 @api_view(["GET"])
