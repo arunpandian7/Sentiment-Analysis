@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 body{
-  background-color: #f9f8f8;
+  background-color: #1a1c1d;
 }
 
 .container {
@@ -21,6 +21,7 @@ body{
 .title{
   margin-bottom: 10px !important;
   font-family: 'Chelsea Market', cursive !important;
+  
 }
 
 .searchBar{
@@ -28,7 +29,7 @@ body{
 }
 
 .chart{
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
