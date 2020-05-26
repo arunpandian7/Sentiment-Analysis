@@ -19,7 +19,7 @@ from main_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', views.homepage),
+    path('', views.homepage),
     path('getsentiment', views.getsentiment),
     path('analyzehashtag', views.analyzehashtag),
     path('fetchTweets', views.fetchTweets)
