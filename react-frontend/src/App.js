@@ -18,6 +18,12 @@ class App extends React.Component {
     tweets : [],
     series: [44, 55, 41],
     options: {
+      chart:{
+        background: '#1a1c1d'
+      },
+      legend:{
+        color:"#a0a0a0"
+      },
       colors: ["#46BFBD", "#F7464A",  "#FDB45C"],
       labels: ["Positive", "Negative", "Neutral"],
       plotOptions: {
@@ -142,7 +148,7 @@ class App extends React.Component {
             type="donut"
             width="420"
           />
-          <h1 class="heading_desc">{this.state.hashtag_desc}</h1>
+          <h1 className="heading_desc">{this.state.hashtag_desc}</h1>
         </div>
       );
     }
@@ -169,7 +175,7 @@ class App extends React.Component {
 
     return (
       <div className={Styles.container}>
-        <Typography variant="h2" color="primary" align="center" className={Styles.title}>
+        <Typography variant="h2" color="secondary" align="center" className={Styles.title}>
           SENTIMENT ANALYST
         </Typography>
         <Paper
