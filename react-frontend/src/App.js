@@ -132,7 +132,7 @@ class App extends React.Component {
       return (
         <div className={Styles.loadingBar}>
           <img src={require("./loading.gif")} width="200" alt="loading-gif" />
-          <Typography variant="h5" align="center" color="primary">Please Wait..</ Typography>
+          <Typography variant="h6" align="center" color="secondary">Please Wait..</ Typography>
         </ div>
       );
     }
@@ -156,6 +156,14 @@ class App extends React.Component {
 
   textHandler = (event) => {
     this.setState({ hashtagText: event.target.value });
+  };
+
+  keyPress = (event) => {
+    if ((event.keyCode) === 13) {
+      event.preventDefault()
+      console.log('Enter Key Pressed....');
+      this.clickHandler();
+    }
   };
 
   render() {
@@ -197,6 +205,7 @@ class App extends React.Component {
             placeholder="Search"
             inputProps={{ "aria-label": "search" }}
             onChange={this.textHandler}
+            onKeyDown={this.keyPress}
           />
         </Paper>
         <Button
