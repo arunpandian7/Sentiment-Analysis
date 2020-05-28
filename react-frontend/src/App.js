@@ -132,7 +132,10 @@ class App extends React.Component {
       return (
         <div className={Styles.loadingBar}>
           <img src={require("./loading.gif")} width="200" alt="loading-gif" />
+
           <Typography variant="h6" align="center" color="secondary">Please Wait..</ Typography>
+
+
         </ div>
       );
     }
