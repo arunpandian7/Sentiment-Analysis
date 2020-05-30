@@ -24,7 +24,9 @@ Sentiment Analyst is a web app that uses Sentiment Inference Model which is crea
 - **tweepy** - Twitter API Library for Python
 - **Requests** - Handles REST Requests
 - **H5Py** - handles .h5 and .hdf5 model files
-- 
+- **Jsonify** - converts python objects into JSON format
+### Instructions 
+If you want itpo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzAzNzc0NzEsLTI0Mzk0OTUxMV19
+eyJoaXN0b3J5IjpbMTU5OTU4Nzk2NSwtMjQzOTQ5NTExXX0=
 -->
