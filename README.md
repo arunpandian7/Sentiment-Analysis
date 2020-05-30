@@ -16,7 +16,7 @@ Sentiment Analysis based on a deep learning based algorithm which classifies any
 
 I would recommend you to see my well descriptive notebook which walk through the entire process in [Kaggle](https://www.kaggle.com/arunrk7/nlp-beginner-text-classification-using-lstm).
 ## Sentiment Analyst - The Web App
-Sentiment Analyst is a web app that uses Sentiment Inference Model which is created before with API Server. It pulls the tweets from Twitter Search using Twitter API and analyzes every tweets and labels each tweet with a sentiment and calculate the percentage distribution of sentiments over the twitter. It is built using Django on the backend which serves the model as a API along with React JS Framework on the frontend which provides dynamic web components.
+Sentiment Analyst is a web app that uses Sentiment Inference Model which is created before with API Server. It pulls the tweets from Twitter Search using Twitter API and analyzes every tweets and labels each tweet with a sentiment and calculate the percentage distribution of sentiments over the twitter. It is built using Django on the backend which serves the model as a API along with React JS Framework on the frontend which provides dynamic web components. The frontend UI uses Material UI Framework for the theming and UI elements.
 ### Dependency Bucket
 - **django** - Python based Framework for Backend (Server)
 -  **django RESTframework** - REST API for serving model
@@ -25,11 +25,12 @@ Sentiment Analyst is a web app that uses Sentiment Inference Model which is crea
 - **Requests** - Handles REST Requests
 - **H5Py** - handles .h5 and .hdf5 model files
 - **Jsonify** - converts python objects into JSON format
+- ReactJS- 
 ### Instructions 
 If you want to run this app in your system locally, you can follow this instruction,
 1. Clone the repository using `git clone` and open the terminal inside the repository directory in your system
 2. Install all the requirements using `pip install -r requirements.txt` and Python Package Manager will download all dependencies for you.
-3. Run the app using 
+3. Run the app using `python manage.py runserver` and enjoy the magic.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NjU2OTE4NCwtMjQzOTQ5NTExXX0=
+eyJoaXN0b3J5IjpbLTU4ODk2MzMyNiwtMjQzOTQ5NTExXX0=
 -->
