@@ -37,8 +37,10 @@ If you want to run this app in your system locally, you can follow this instruct
 
 ## Acknowledgements
 
-> If I seen further it is by standing on the shoulder of gaints.
+> If I have seen further than others, it is by standing upon the shoulders of giants. 
+> -
+> Issn
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDI2NjE0NzcsLTI0Mzk0OTUxMV19
+eyJoaXN0b3J5IjpbMzM0MTkzOTE5LC0yNDM5NDk1MTFdfQ==
 -->
