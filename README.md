@@ -37,6 +37,8 @@ If you want to run this app in your system locally, you can follow this instruct
 
 ## Acknowledgements
 
+> If I seen further it is by standing on the shoulder of gaints.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg1MzUzMTk1LC0yNDM5NDk1MTFdfQ==
+eyJoaXN0b3J5IjpbLTE0NDI2NjE0NzcsLTI0Mzk0OTUxMV19
 -->
