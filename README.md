@@ -19,7 +19,10 @@ I would recommend you to see my well descriptive notebook which walk through the
 Sentiment Analyst is a web app that uses Sentiment Inference Model which is created before with API Server. It pulls the tweets from Twitter Search using Twitter API and analyzes every tweets and labels each tweet with a sentiment and calculate the percentage distribution of sentiments over the twitter. It is built using Django on the backend which serves the model as a API along with React JS Framework on the frontend which provides dynamic web components.
 ### Dependency Bucket
 - **django** - Python based Framework for Backend (Server)
--  django RESTframework - R
+-  **django RESTframework** - REST API for serving model
+- **tensorflow** - Deep Learning Framework
+- **tweepy** - Twitter API Library for Python
+- **Requests** - Handles 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjk5MzMxNywtMjQzOTQ5NTExXX0=
+eyJoaXN0b3J5IjpbODY0NDg2MDgsLTI0Mzk0OTUxMV19
 -->
