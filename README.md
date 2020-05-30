@@ -28,12 +28,15 @@ Sentiment Analyst is a web app that uses Sentiment Inference Model which is crea
 - **ReactJS**- Frontend Development Framework
 - **MaterialUI**- UI Components for React based on Material Design
 - **Axios** - REST handler for ReactJS
--  **Apex Chart** - Charts Library for React
+- **Apex Chart** - Charts Library for React
 ### Instructions 
 If you want to run this app in your system locally, you can follow this instruction,
 1. Clone the repository using `git clone` and open the terminal inside the repository directory in your system
 2. Install all the requirements using `pip install -r requirements.txt` and Python Package Manager will download all dependencies for you.
 3. Run the app using `python manage.py runserver` and enjoy the magic.
+
+## Acknowledgements
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzODA2MjA3NCwtMjQzOTQ5NTExXX0=
+eyJoaXN0b3J5IjpbODg1MzUzMTk1LC0yNDM5NDk1MTFdfQ==
 -->
