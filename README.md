@@ -15,7 +15,8 @@ Sentiment Analysis based on a deep learning based algorithm which classifies any
 -   **Pickle** - Implements binary protocols for serialization of objects
 
 I would recommend you to see my well descriptive notebook which walk through the entire process in [Kaggle](https://www.kaggle.com/arunrk7/nlp-beginner-text-classification-using-lstm).
-## Sentiment Analyst
+## Sentiment Analyst - The Web App
+Sentiment Analyst is a web app that uses Sentiment Inference Model which is created before and us
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcyMzYyMzEzLC0yNDM5NDk1MTFdfQ==
+eyJoaXN0b3J5IjpbLTEzOTc4NTQzNDQsLTI0Mzk0OTUxMV19
 -->
