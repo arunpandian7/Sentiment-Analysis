@@ -14,8 +14,8 @@ Sentiment Analysis based on a deep learning based algorithm which classifies any
 -   **Matplotlib** - Visualization library
 -   **Pickle** - Implements binary protocols for serialization of objects
 
-I would recommend you to see my well descriptive notebook which walk through the enit
-
+I would recommend you to see my well descriptive notebook which walk through the entire process in [Kaggle](https://www.kaggle.com/arunrk7/nlp-beginner-text-classification-using-lstm).
+## Sentiment Analyst
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MzE2MTE5NSwtMjQzOTQ5NTExXX0=
+eyJoaXN0b3J5IjpbMjcyMzYyMzEzLC0yNDM5NDk1MTFdfQ==
 -->
