@@ -14,8 +14,8 @@ Sentiment Analysis based on a deep learning based algorithm which classifies any
 -   **Matplotlib** - Visualization library
 -   **Pickle** - Implements binary protocols for serialization of objects
 
-I wo
+I would recommend you to see my well descriptive notebook which walk through the enit
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNTc3MjQ1MCwtMjQzOTQ5NTExXX0=
+eyJoaXN0b3J5IjpbLTc5MzE2MTE5NSwtMjQzOTQ5NTExXX0=
 -->
