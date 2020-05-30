@@ -1,2 +1,5 @@
 # Sentiment-Analysis
-A Deep Learning based Sentiment Analysis tool for effective analysis on subjects on internet. 
+Sentiment Analysis is a
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTkxNDcxMDU3OV19
+-->
