@@ -36,11 +36,11 @@ If you want to run this app in your system locally, you can follow this instruct
 3. Run the app using `python manage.py runserver` and enjoy the magic.
 
 ## Acknowledgements
+A lot of resources and people in internet who enables me to
 
-> #If I have seen further than others, it is by standing upon the shoulders of giants. 
+> ### If I have seen further than others, it is by standing upon the shoulders of giants. 
 > Isaac Newton 
 
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjA0OTU0NzgsLTI0Mzk0OTUxMV19
+eyJoaXN0b3J5IjpbMTg5NDQxOTQzNSwtMjQzOTQ5NTExXX0=
 -->
