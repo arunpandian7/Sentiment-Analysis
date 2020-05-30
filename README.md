@@ -25,12 +25,14 @@ Sentiment Analyst is a web app that uses Sentiment Inference Model which is crea
 - **Requests** - Handles REST Requests
 - **H5Py** - handles .h5 and .hdf5 model files
 - **Jsonify** - converts python objects into JSON format
-- ReactJS- 
+- ReactJS- Frontend Development Framework
+- MaterialUI- UI Components for React based on Material Design
+- 
 ### Instructions 
 If you want to run this app in your system locally, you can follow this instruction,
 1. Clone the repository using `git clone` and open the terminal inside the repository directory in your system
 2. Install all the requirements using `pip install -r requirements.txt` and Python Package Manager will download all dependencies for you.
 3. Run the app using `python manage.py runserver` and enjoy the magic.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4ODk2MzMyNiwtMjQzOTQ5NTExXX0=
+eyJoaXN0b3J5IjpbMTc0NDI1OTI2MiwtMjQzOTQ5NTExXX0=
 -->
