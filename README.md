@@ -22,7 +22,9 @@ Sentiment Analyst is a web app that uses Sentiment Inference Model which is crea
 -  **django RESTframework** - REST API for serving model
 - **tensorflow** - Deep Learning Framework
 - **tweepy** - Twitter API Library for Python
-- **Requests** - Handles 
+- **Requests** - Handles REST Requests
+- **H5Py** - handles .h5 and .hdf5 model files
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY0NDg2MDgsLTI0Mzk0OTUxMV19
+eyJoaXN0b3J5IjpbLTE1NzAzNzc0NzEsLTI0Mzk0OTUxMV19
 -->
