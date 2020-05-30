@@ -36,11 +36,12 @@ If you want to run this app in your system locally, you can follow this instruct
 3. Run the app using `python manage.py runserver` and enjoy the magic.
 
 ## Acknowledgements
-A lot of resources and people in internet who enables me to
+A lot of resources and people in internet who enables me to learn these things and create this app. I owe them a acknowledgment and reference.
+
 
 > ### If I have seen further than others, it is by standing upon the shoulders of giants. 
 > Isaac Newton 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NDQxOTQzNSwtMjQzOTQ5NTExXX0=
+eyJoaXN0b3J5IjpbMTI1MjM5NjU4NywtMjQzOTQ5NTExXX0=
 -->
