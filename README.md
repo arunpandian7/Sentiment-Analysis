@@ -39,8 +39,9 @@ If you want to run this app in your system locally, you can follow this instruct
 
 > If I have seen further than others, it is by standing upon the shoulders of giants. 
 > -
-> Issn
+> Isaac Newton 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM0MTkzOTE5LC0yNDM5NDk1MTFdfQ==
+eyJoaXN0b3J5IjpbMTU5MDc3OTQ3NiwtMjQzOTQ5NTExXX0=
 -->
