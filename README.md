@@ -16,7 +16,7 @@ Sentiment Analysis based on a deep learning based algorithm which classifies any
 
 I would recommend you to see my well descriptive notebook which walk through the entire process in [Kaggle](https://www.kaggle.com/arunrk7/nlp-beginner-text-classification-using-lstm).
 ## Sentiment Analyst - The Web App
-Sentiment Analyst is a web app that uses Sentiment Inference Model which is created before and us
+Sentiment Analyst is a web app that uses Sentiment Inference Model which is created before with API Server. It is built w
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTc4NTQzNDQsLTI0Mzk0OTUxMV19
+eyJoaXN0b3J5IjpbLTcwMTE5MzM3NiwtMjQzOTQ5NTExXX0=
 -->
