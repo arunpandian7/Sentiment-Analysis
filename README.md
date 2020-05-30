@@ -27,7 +27,8 @@ Sentiment Analyst is a web app that uses Sentiment Inference Model which is crea
 - **Jsonify** - converts python objects into JSON format
 ### Instructions 
 If you want to run this app in your system locally, you can follow this instruction,
-1. Clone the repository using `git clone ` flow
+1. Clone the repository using `git clone` and open the terminal inside the repository directory in your system
+2. Install all the requirements using `pip install -r requirements.txt` and Python Package Manager will download 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MDgxOTY2MSwtMjQzOTQ5NTExXX0=
+eyJoaXN0b3J5IjpbLTkwMDc0NDg3NiwtMjQzOTQ5NTExXX0=
 -->
