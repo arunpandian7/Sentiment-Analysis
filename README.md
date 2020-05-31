@@ -17,6 +17,7 @@ Sentiment Analysis based on a deep learning based algorithm which classifies any
 I would recommend you to see my well descriptive notebook which walk through the entire process in [Kaggle](https://www.kaggle.com/arunrk7/nlp-beginner-text-classification-using-lstm).
 ## Sentiment Analyst - The Web App
 Sentiment Analyst is a web app that uses Sentiment Inference Model which is created before with API Server. It pulls the tweets from Twitter Search using Twitter API and analyzes every tweets and labels each tweet with a sentiment and calculate the percentage distribution of sentiments over the twitter. It is built using Django on the backend which serves the model as a API along with React JS Framework on the frontend which provides dynamic web components. The frontend UI uses Material UI Framework for the theming and UI elements.
+![Sentiment Analyst Web App](https://github.com/ArunRK7Codie/Sentiment-Analysis/blob/master/sentiment-analyst-web-app.gif)
 ### Dependency Bucket
 - **django** - Python based Framework for Backend (Server)
 -  **django RESTframework** - REST API for serving model
@@ -37,11 +38,11 @@ If you want to run this app in your system locally, you can follow this instruct
 
 ## Acknowledgements
 A lot of resources and people in internet who enables me to learn these things and create this app. I owe them a acknowledgment and reference.
-
+- ReactJS has a very nice documentation and tutorial in their [website](https://reactjs.org/docs/getting-started.html), it was very helpful to me while learning.
+- [ReactJS Crash Course](https://www.youtube.com/watch?v=nvHeB32ICDM&t=3738s)- by Hitesh Choudhary
+- [Material-UI Documentation](https://material-ui.com/getting-started/installation/) - it's a great reference material and have very nice demos 
+- [MaterialUI + React Tutorials](https://www.youtube.com/watch?v=pHclLuRolzE&list=PLQg6GaokU5CwiVmsZ0d_9Zsg_DnIP_xwr) by Anthony Sistilli made a nice head on tutorial into MaterialUI Components.
+- [Keras Guides](https://keras.io/guides/)- Simple easy to use guides for training deep learning model.
 
 > ### If I have seen further than others, it is by standing upon the shoulders of giants. 
 > Isaac Newton 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MjM5NjU4NywtMjQzOTQ5NTExXX0=
--->
